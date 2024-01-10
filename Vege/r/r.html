@@ -1,0 +1,21 @@
+<body>
+    「自己管理が得意」より「想像力がある」が当てはまる
+</body>
+
+<form name="formChecker">
+    <input type="radio" name="rbtn" value="yes"> Yes
+    <input type="radio" name="rbtn" value="no" checked> No
+    <input type="button" value="回答" onClick="check()">
+</form>
+    
+<script type="text/javascript">
+    function check() {
+        var rcheck = document.formChecker.rbtn[0].checked; //ラジオボタンrbtnの１つ目（rbtn[0]）の状態を取得
+        //rcheckの内容がtrue（ボタンが押されている状態）かどうかで条件分岐
+        if (rcheck) { //tureの場合
+            document.location = "r/r.html"; //リンク先を呼び出す
+        } else { //falseの場合
+            document.location = "l/l.html"; //リンク先を呼び出す
+        }
+    }
+</script>
